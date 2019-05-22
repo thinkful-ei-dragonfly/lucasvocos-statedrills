@@ -31,6 +31,7 @@ class Bomb extends React.Component{
           ...this.state,
           string: 'BOOM!!!!'
         })
+          clearInterval(this.interval);
       }
       this.setState({
         count: newCount
