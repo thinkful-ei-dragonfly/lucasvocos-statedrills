@@ -6,6 +6,7 @@ import './index.css';
 // import TheDate from './state/TheDate'
 // import Counter from './state/Counter'
 import HelloWorld from './state-drills/HelloWorld'
+import Bomb from './state-drills/Bomb'
 
 // const firstTooltip = (
 //   <Tooltip color='hotpink' message='tooltip message'>
@@ -21,6 +22,7 @@ function App() {
   return (
     <main className='App'>
       <HelloWorld></HelloWorld>
+      <Bomb></Bomb>
       {
       // <Counter count={123} step={1}></Counter>
       // <Split className='left' flexBasis={2}>
