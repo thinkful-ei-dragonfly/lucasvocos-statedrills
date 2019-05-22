@@ -14,36 +14,31 @@ class RouletteGun extends React.Component{
   }
   handleTriggerPulled = () => {
     this.setState({
-      ...this.state,
       spinningTheChamber: true,
       resultString: 'spinning the chamber and pulling the trigger!...',
+    },() => {
+      console.log('after trigger pull',this.state.spinningTheChamber);
     })
 
-    if ((this.state.chamber === this.props.bulletInChamber) && this.state.spinningTheChamber === false) {
-      this.setState({
-        ...this.state,
-        resultString: 'BANG!!!!',
-      })
-    }
-    if((this.state.chamber !== this.props.bulletInChamber) && this.state.spinningTheChamber === false) {
-      this.setState({
-        ...this.state,
-        resultString: `you're safe!`,
-      })
-    }
-    if (this.state.spinningTheChamber === true) {
-      this.setState({
-        ...this.state,
-        resultString: 'spinning the chamber and pulling the trigger!...'
-      })
-    }
+
+
     this.interval = setInterval(()=>{
       const newNum = Math.ceil(Math.random() * 8);
       this.setState({
-        ...this.state,
         chamber: newNum,
         spinningTheChamber: false
       })
+      if ((this.state.chamber === this.props.bulletInChamber) && this.state.spinningTheChamber === false) {
+        this.setState({
+          resultString: 'BANG!!!!',
+        })
+      }
+      if((this.state.chamber !== this.props.bulletInChamber) && this.state.spinningTheChamber === false) {
+        this.setState({
+          resultString: `you're safe!`,
+        })
+      }
+
         clearInterval(this.interval);
     }, 2000)
   }
@@ -51,6 +46,9 @@ class RouletteGun extends React.Component{
 
   }
   render(){
+
+    // <p>{(this.state.chamber === this.props.bulletInChamber) ? 'BANG!!!' : `you're safe!`}</p>
+    // Figure out conditional logic
     return <div className="orange">
       <p>Spinning the chamber and pulling the trigger!</p>
       <p className="trigger-result">{this.state.resultString}</p>
