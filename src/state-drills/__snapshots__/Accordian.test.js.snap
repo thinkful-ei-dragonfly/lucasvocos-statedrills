@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Accordian opens any clicked li 1`] = `
+<ul>
+  <li
+    key="0"
+    onClick={[Function]}
+  >
+    Section 1
+  </li>
+  <li
+    key="1"
+    onClick={[Function]}
+  >
+    Section 2
+    <p
+      className="content"
+    >
+      Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
+    </p>
+  </li>
+  <li
+    key="2"
+    onClick={[Function]}
+  >
+    Section 3
+  </li>
+</ul>
+`;
+
+exports[`Testing Accordian renders empty given no tabs 1`] = `<ul />`;
+
+exports[`Testing Accordian renders tabs but none are active 1`] = `
+<ul>
+  <li
+    key="0"
+    onClick={[Function]}
+  >
+    Section 1
+  </li>
+  <li
+    key="1"
+    onClick={[Function]}
+  >
+    Section 2
+  </li>
+  <li
+    key="2"
+    onClick={[Function]}
+  >
+    Section 3
+  </li>
+</ul>
+`;
+
+exports[`Testing Accordian sets last clicked element as active 1`] = `
+<ul>
+  <li
+    key="0"
+    onClick={[Function]}
+  >
+    Section 1
+  </li>
+  <li
+    key="1"
+    onClick={[Function]}
+  >
+    Section 2
+  </li>
+  <li
+    key="2"
+    onClick={[Function]}
+  >
+    Section 3
+    <p
+      className="content"
+    >
+      Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
+    </p>
+  </li>
+</ul>
+`;
