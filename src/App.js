@@ -9,18 +9,9 @@ import './index.css';
 // import Bomb from './state-drills/Bomb';
 // import RouletteGun from './state-drills/RouletteGun';
 // import Tabs from './state/Tabs'
-import Accordian from './state-drills/Accordian'
+// import Accordian from './state-drills/Accordian'
+import DemonymApp from './demonymapp/demonymApp'
 
-// const firstTooltip = (
-//   <Tooltip color='hotpink' message='tooltip message'>
-//   ipsum
-//   </Tooltip>
-// )
-// const secondTooltip = (
-//   <Tooltip color='#126BCC' message='another tooltip message'>
-//   officiis
-//   </Tooltip>
-// )
 function App() {
   // const tabsProp = [
   //   { name: 'First tab',
@@ -46,8 +37,9 @@ function App() {
   ]
   return (
     <main className='App'>
-      <Accordian sections={sections}></Accordian>
+      <DemonymApp/>
       {
+      // <Accordian sections={sections}></Accordian>
       // <Tabs tabs={tabsProp}></Tabs>
       // <RouletteGun ></RouletteGun>
       // <RouletteGun ></RouletteGun>
